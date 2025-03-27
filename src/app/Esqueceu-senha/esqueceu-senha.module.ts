@@ -9,5 +9,6 @@ import { EsqueciSenhaPageRoutingModule } from './esqueceuS-routing.module';
     IonicModule,
     EsqueciSenhaPageRoutingModule,
   ]
+
 })
 export class EsqueciSenhaPageModule {}
