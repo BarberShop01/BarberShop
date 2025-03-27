@@ -16,4 +16,9 @@ export class CadastroPage {
   irParaEsqueciSenha() {
     this.router.navigate(['/esqueci-senha']);
   }
+
+    irParaRegisterUser() {
+      this.router.navigate(['/registerUser'])
+    }
+
 }

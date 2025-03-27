@@ -1,0 +1,74 @@
+<ion-content>
+  <div class="container">
+    <div class="Logo-cadastro">
+      <a (click)="irParaCadastro()"><img src="assets/registerUser/logoRegisterUser.png" alt="Logo do registro Usuario" class="ImgLogo-registerUser"></a>
+    </div>
+
+    <div class="suasInfo">
+      <h1 class="tituloSuasInfo">Suas informações</h1>
+      <p class="P-suasInfo">Insira suas informações básicas</p>
+    </div>
+
+    <div class="upload-section">
+      <label for="upload-photo" class="photo-box">
+        <img src="assets/registerUser/iconRegisterUser.png" alt="Foto de perfil" class="photo-preview">
+      </label>
+      <input type="file" id="upload-photo" accept="image/*" hidden>
+
+      <div class="photo-text-container">
+        <p class="photo-text">
+          <span class="photo-link" id="photo-text-link">Clique para inserir uma foto para seu perfil</span><br>
+          Seu rosto precisa estar nítido na foto.<br>
+          Tire a foto em um local iluminado.<br>
+          Limite máximo de 3mb.
+        </p>
+      </div>
+    </div>
+
+    <div class="formsRegister">
+      <div class="form-group">
+        <label for="username">Nome completo:</label>
+        <input class="nomeInput" type="text" name="username" placeholder="Digite seu nome completo">
+      </div>
+
+      <div class="form-grupo2">
+        <div class="input-container">
+          <label for="number">Número:</label>
+          <input class="numInput" type="number" name="number" id="number" placeholder="Digite seu número">
+        </div>
+
+        <div class="input-container">
+          <label for="cpf">CPF:</label>
+          <input class="cpfInput" type="number" name="cpf" id="cpf" placeholder="Digite seu CPF">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input class="emailInput" type="text" name="email" placeholder="Digite seu email">
+      </div>
+
+      <div class="form-group">
+        <label for="data">Data de Nascimento:</label>
+        <input class="dataInput" type="date" name="data">
+      </div>
+
+      <div class="form-grupo5">
+        <div class="input-container">
+          <label for="password">Senha:</label>
+          <input class="senhaInput" type="password" name="password" placeholder="Digite uma senha" required>
+        </div>
+
+        <div class="input-container">
+          <label for="okpassword">Confirmar a senha:</label>
+          <input class="okSenhaInput" type="password" name="okpassword" placeholder="Confirme a senha" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-wrapper">
+      <ion-button expand="full" class="button-container" fill="clear">Cadastrar</ion-button>
+    </div>
+
+  </div>
+</ion-content>
