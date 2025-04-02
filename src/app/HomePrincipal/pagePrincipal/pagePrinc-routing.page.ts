@@ -7,7 +7,7 @@ const routes: Routes = [
   children: [
     {path:'home', loadChildren: () => import('../Home/home.module').then(m => m.homeModule)},
     {path:'localizations', loadChildren: () => import('../Localizações/loc.module').then(m=>m.LocPageModule) },
-    {path:'barbeiros', loadChildren: () => import('../barbeiros/barb.module').then (m=>m.barbPage)},
+    {path:'barbeiros', loadChildren: () => import('../barbeiros/barb.module').then (m=>m.barbPageModule)},
     {path:'sobre', loadChildren: () => import('../Sobre/sobre.module').then (m=>m.sobreModule)}
   ]}
 ]

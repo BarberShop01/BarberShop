@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-princ',
@@ -11,16 +12,35 @@ import { CommonModule } from '@angular/common';
 })
 export class pagePrincPage {
 
-  mostrarPopUp = false;
+  constructor(private router: Router) {}
 
-  constructor() {}
 
-  abrirPopUp() {
-    this.mostrarPopUp = true;
-  }
+  mostrarPopUp: boolean = false;
+mostrarPopUpPerfil: boolean = false;
 
-  fecharPopUp() {
-    this.mostrarPopUp = false;
+abrirPopUp() {
+  this.mostrarPopUp = true;
+  this.mostrarPopUpPerfil = false;
+}
+
+fecharPopUp() {
+  this.mostrarPopUp = false;
+}
+
+abrirPopUpPerfil() {
+  this.mostrarPopUpPerfil = true;
+  this.mostrarPopUp = false;
+}
+
+fecharPopUpPerfil() {
+  this.mostrarPopUpPerfil = false;
+}
+
+  logout() {
+    console.log('Usuário deslogado!');
+    this.mostrarPopUpPerfil = false;
+    this.router.navigate(['/cadastro']);
   }
 
 }
+

@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
-      <div class="profile-container">
-        <ion-avatar>
-          <img src="assets/img/profile.jpg" alt="Profile">
+      <div class="profile-container"   [ngClass]="{'blur-effect': mostrarPopUp}">
+        <ion-avatar (click)="abrirPopUpPerfil()">
+          <img src="assets/img/profile.jpg" alt="Profile" >
         </ion-avatar>
         <ion-icon name="notifications-outline" size="large"></ion-icon>
       </div>
@@ -38,7 +38,7 @@
   </ion-tab-bar>
 </ion-tabs>
 
-<div class="center-button">
+<div class="center-button"   [ngClass]="{'blur-effect': mostrarPopUp || mostrarPopUpPerfil}">
   <ion-button class="floating-button" (click)="abrirPopUp()">
     <ion-icon name="add" class="bottom-icon" style="font-size: 40px; width: 40px; height: 40px;"></ion-icon>
   </ion-button>
@@ -58,3 +58,17 @@
     <ion-button color="primary">Marcação de horário</ion-button>
   </div>
 </div>
+
+
+
+<div class="overlay" *ngIf="mostrarPopUpPerfil" (click)="fecharPopUpPerfil()"></div>
+
+
+<div class="popup-perfil" *ngIf="mostrarPopUpPerfil">
+  <div class="popup-content">
+    <div class="popup-item">Perfil</div>
+    <div class="popup-divider"></div>
+    <div class="popup-item logout" (click)="logout()">Sair</div>
+  </div>
+</div>
+

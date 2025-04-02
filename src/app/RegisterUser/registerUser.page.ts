@@ -52,7 +52,7 @@ export class RegisterUser implements AfterViewInit {
     this.router.navigate(['/cadastro'])
   }
 
-  irpagePrincipal(){
-    this.router.navigate(['/pagePrincipal'])
+  irHome() {
+    this.router.navigate(['/pagePrincipal/home']);
   }
 }
