@@ -51,4 +51,8 @@ export class RegisterUser implements AfterViewInit {
   irParaCadastro(){
     this.router.navigate(['/cadastro'])
   }
+
+  irHome() {
+    this.router.navigate(['/pagePrincipal/home']);
+  }
 }

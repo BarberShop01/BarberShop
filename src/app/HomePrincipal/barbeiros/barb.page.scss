@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.barb-tabs {
+  width: 335px;
+  height: 510px;
+  background: #232323;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.barb-title {
+  font-family: 'Michroma', sans-serif;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.icon-loc {
+  font-size: 18px;
+  color: red;
+}
+
+.loc-barb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Michroma', sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+  padding-top: 5px;
+  gap: 5px;
+}
+
+.barb-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-top: 15px;
+}
+
+.arrow {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.barb-desc {
+  text-align: center;
+  width: 75%;
+}
+
+.lista1 {
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+
+}
+
+h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 18px;
+}

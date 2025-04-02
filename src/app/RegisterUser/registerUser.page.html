@@ -28,46 +28,46 @@
     <div class="formsRegister">
       <div class="form-group">
         <label for="username">Nome completo:</label>
-        <input class="nomeInput" type="text" name="username" placeholder="Digite seu nome completo">
+        <input class="nomeInput" type="text" id="username" name="username" placeholder="Digite seu nome completo">
       </div>
 
       <div class="form-grupo2">
         <div class="input-container">
           <label for="number">Número:</label>
-          <input class="numInput" type="number" name="number" id="number" placeholder="Digite seu número">
+          <input class="numInput" type="number" id="number" name="number" placeholder="Digite seu número">
         </div>
 
         <div class="input-container">
           <label for="cpf">CPF:</label>
-          <input class="cpfInput" type="number" name="cpf" id="cpf" placeholder="Digite seu CPF">
+          <input class="cpfInput" type="number" id="cpf" name="cpf" placeholder="Digite seu CPF">
         </div>
       </div>
 
       <div class="form-group">
         <label for="email">E-mail:</label>
-        <input class="emailInput" type="text" name="email" placeholder="Digite seu email">
+        <input class="emailInput" type="text" id="email" name="email" placeholder="Digite seu email">
       </div>
 
       <div class="form-group">
         <label for="data">Data de Nascimento:</label>
-        <input class="dataInput" type="date" name="data">
+        <input class="dataInput" type="date" id="data" name="data">
       </div>
 
       <div class="form-grupo5">
         <div class="input-container">
           <label for="password">Senha:</label>
-          <input class="senhaInput" type="password" name="password" placeholder="Digite uma senha" required>
+          <input class="senhaInput" type="password" id="password" name="password" placeholder="Digite uma senha" required>
         </div>
 
         <div class="input-container">
           <label for="okpassword">Confirmar a senha:</label>
-          <input class="okSenhaInput" type="password" name="okpassword" placeholder="Confirme a senha" required>
+          <input class="okSenhaInput" type="password" id="okpassword" name="okpassword" placeholder="Confirme a senha" required>
         </div>
       </div>
     </div>
 
     <div class="button-wrapper">
-      <ion-button expand="full" class="button-container" fill="clear">Cadastrar</ion-button>
+      <a (click)=" irHome()"><ion-button expand="full" class="button-container" fill="clear">Cadastrar</ion-button></a>
     </div>
 
   </div>
