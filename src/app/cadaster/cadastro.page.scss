@@ -1,5 +1,5 @@
 ion-content {
-  --ion-background-color: #111111; /* Melhor compatibilidade */
+  --ion-background-color: #111111;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ ion-content {
 }
 
 ion-item {
-  --ion-background-color: transparent; /* Ajuste para Ionic 5 */
+  --ion-background-color: transparent;
   --border-radius: 20px;
 }
 

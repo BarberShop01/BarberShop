@@ -1,4 +1,4 @@
-/* Estilos gerais */
+
 ion-content {
   --ion-background-color: #111111;
   display: flex;
@@ -22,7 +22,7 @@ ion-content {
 }
 
 .ImgLogo-registerUser {
-  height: 80px; /* Reduz um pouco o tamanho */
+  height: 80px;
   width: auto;
 }
 
@@ -94,7 +94,6 @@ ion-content {
   cursor: pointer;
 }
 
-/* Estilização dos inputs */
 .formsRegister {
   display: flex;
   flex-direction: column;
@@ -109,7 +108,6 @@ ion-content {
   font-weight: bold;
 }
 
-/* Grupos de Inputs */
 .form-group,
 .form-group3,
 .form-group4 {
