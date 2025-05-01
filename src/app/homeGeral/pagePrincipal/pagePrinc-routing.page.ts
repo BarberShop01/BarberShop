@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { pagePrincPage } from './pagePrinc.page';
+import { PagePrincPage } from './pagePrinc.page';
 
 const routes: Routes = [
-  {path: '', component: pagePrincPage,
+  {path: '', component: PagePrincPage,
   children: [
     {path:'home', loadChildren: () => import('../Home/home.module').then(m => m.homeModule)},
     {path:'localizations', loadChildren: () => import('../Localizações/loc.module').then(m=>m.LocPageModule) },

@@ -73,6 +73,15 @@ ion-content {
   border-radius: 12px;
 }
 
+.photo-description {
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
 .photo-text-container {
   display: flex;
   flex-direction: column;
@@ -161,12 +170,13 @@ ion-button {
   border-radius: 10px;
 }
 
+/* Responsivo */
 @media (max-width: 400px) {
-  .Logo-cadastro{
+  .Logo-cadastro {
     padding-top: 7%;
   }
+
   .container {
-    width: 100%;
     padding: 0 15px;
   }
 

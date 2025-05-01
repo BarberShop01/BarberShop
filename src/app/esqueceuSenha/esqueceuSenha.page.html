@@ -1,0 +1,33 @@
+<ion-header class="custom-header">
+  <ion-buttons slot="start">
+    <ion-button (click)="voltarParaLogin()" fill="clear" class="voltar-btn">
+      <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      Voltar
+    </ion-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="container">
+    <div class="card">
+      <h2>REDEFINIR A SENHA</h2>
+      <p>
+        Digite o endereço de email que você usa no appbarber para enviarmos um link de redefinição de senha.
+      </p>
+
+      <label class="label-email">Endereço de e-mail:</label>
+      <div class="email-field">
+        <ion-icon name="mail-outline" class="email-icon"></ion-icon>
+        <input type="email" [(ngModel)]="email" placeholder="Endereço de e-mail" />
+      </div>
+
+      <ion-button expand="block" class="btn-enviar" (click)="enviarReset()">
+        Enviar
+      </ion-button>
+
+      <ion-button expand="block" class="btn-cancelar" (click)="cancelar()">
+        Cancelar
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { pagePrincPage } from './pagePrinc.page';
+import { PagePrincPage } from './pagePrinc.page';
 
 @NgModule({
-  declarations: [pagePrincPage],
+  declarations: [PagePrincPage],
   imports: [
     CommonModule,
     IonicModule

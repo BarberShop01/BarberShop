@@ -1,60 +1,83 @@
-import { IonicModule } from "@ionic/angular";
-import { Component, AfterViewInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { CommonModule } from "@angular/common";
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { IonicModule } from '@ionic/angular'; // Importe o IonicModule
+import { CommonModule } from '@angular/common'; // Se necessário, adicione também o CommonModule
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector:'app-cadastro',
+  selector: 'app-cadastro',
+  templateUrl: './cadastro.page.html',
+  styleUrls: ['./cadastro.page.scss'],
   standalone: true,
-  imports:[IonicModule, CommonModule],
-  templateUrl:'./cadastro.page.html',
-  styleUrls:['./cadastro.page.scss'],
+  imports: [IonicModule, CommonModule, FormsModule],
 })
+export class CadastroPage {
+  nome: string = '';
+  numero: string = '';
+  cpf: string = '';
+  email: string = '';
+  dataNascimento: string = '';
+  senha: string = '';
+  confirmarSenha: string = '';
+  imagem: File | null = null; // Altere para File
+  imagemPreview: string | null = null; // Pré-visualização da imagem
+  carregando: boolean = false; // Para controle de carregamento
 
-export class Cadastro implements AfterViewInit{
-  constructor (private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
-  ngAfterViewInit() {
-    this.setupPhotoUpload();
+  // Função de navegação para login
+  irParalogin() {
+    this.router.navigate(['/login']); // Substitua '/login' pela rota correta de sua aplicação
   }
 
-  setupPhotoUpload() {
-    const photoBox = document.querySelector(".photo-box") as HTMLElement;
-    const photoText = document.getElementById("photo-text-link") as HTMLElement;
-    const fileInput = document.getElementById("upload-photo") as HTMLInputElement;
-    const profileImage = document.querySelector(".photo-preview") as HTMLImageElement;
+  // Função de pré-visualização de imagem
+  onImagemSelecionada(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      this.imagem = file;
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.imagemPreview = e.target.result; // Atualiza a visualização da imagem
+      };
+      reader.readAsDataURL(file);
+    }
+  }
 
-    if (!photoBox || !photoText || !fileInput || !profileImage) {
-      console.error("Elementos não encontrados.");
+  // Função de cadastro
+  async cadastrar() {
+    if (this.senha !== this.confirmarSenha) {
+      alert('As senhas não coincidem!');
       return;
     }
 
-    const openFileSelector = () => fileInput.click();
-    photoBox.addEventListener("click", openFileSelector);
-    photoText.addEventListener("click", openFileSelector);
+    this.carregando = true; // Inicia o carregamento
+    try {
+      const formData = new FormData();
+      formData.append('nome', this.nome);
+      formData.append('numero', this.numero);
+      formData.append('cpf', this.cpf);
+      formData.append('email', this.email);
+      formData.append('dataNascimento', this.dataNascimento);
+      formData.append('senha', this.senha);
+      if (this.imagem) {
+        formData.append('imagem', this.imagem); // Envia o arquivo de imagem
+      }
 
+      const response = await this.http.post<any>('http://localhost:3000/api/cadastrar', formData).toPromise();
 
-    fileInput.addEventListener("change", (event: Event) => {
-      const target = event.target as HTMLInputElement;
-      if (!target.files || target.files.length === 0) return;
-
-      const file = target.files[0];
-      const reader = new FileReader();
-
-      reader.onload = (e) => {
-        profileImage.src = e.target?.result as string;
-      };
-
-      reader.readAsDataURL(file);
-    });
-  };
-
-  irParalogin(){
-    this.router.navigate(['/login'])
-  };
-
-  irParaHome() {
-    this.router.navigate(['/pagePrincipal/home'])
+      if (response && response.message === 'Usuário cadastrado com sucesso!') {
+        alert('Cadastro realizado com sucesso!');
+        this.router.navigate(['/pagePrincipal/home']);
+      } else {
+        alert('Erro ao cadastrar usuário!');
+      }
+    } catch (erro) {
+      console.error('Erro inesperado ao cadastrar:', erro);
+      alert('Erro inesperado. Tente novamente.');
+    } finally {
+      this.carregando = false; // Finaliza o carregamento
+    }
   }
 }

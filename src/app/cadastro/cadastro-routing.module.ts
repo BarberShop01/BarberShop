@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
-import { Router, RouterModule, Routes } from "@angular/router";
-import { Cadastro } from "./cadastro.page";
+import {RouterModule, Routes } from "@angular/router";
+import { CadastroPage } from "./cadastro.page";
 
 const routes: Routes = [
-  {path:'', component: Cadastro}
+  {path:'', component: CadastroPage}
 ];
 
 @NgModule({
@@ -11,4 +11,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class cadastroRoutingPage {}
+export class CadastroRoutingModule {}
+

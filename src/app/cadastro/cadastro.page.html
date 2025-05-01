@@ -1,74 +1,80 @@
 <ion-content>
   <div class="container">
+    <!-- Logo -->
     <div class="Logo-cadastro">
-      <a (click)="irParalogin()"><img src="assets/Logo-cadastro.png" alt="Logo do registro Usuario" class="ImgLogo-registerUser"></a>
+      <a (click)="irParalogin()">
+        <img src="assets/Logo-cadastro.png" alt="Logo do registro Usuario" class="ImgLogo-registerUser" />
+      </a>
     </div>
 
+    <!-- Título e subtítulo -->
     <div class="suasInfo">
       <h1 class="tituloSuasInfo">Suas informações</h1>
       <p class="P-suasInfo">Insira suas informações básicas</p>
     </div>
 
+    <!-- Upload da imagem -->
     <div class="upload-section">
       <label for="upload-photo" class="photo-box">
-        <img src="assets/iconRegisterUser.png" alt="Foto de perfil" class="photo-preview">
+        <img [src]="imagemPreview || 'assets/iconRegisterUser.png'" alt="Foto de perfil" class="photo-preview" />
       </label>
-      <input type="file" id="upload-photo" accept="image/*" hidden>
-
+      <input type="file" id="upload-photo" accept="image/*" hidden (change)="onImagemSelecionada($event)" />
+      <p class="photo-description">Essa será sua foto de perfil visível no aplicativo.</p>
       <div class="photo-text-container">
         <p class="photo-text">
-          <span class="photo-link" id="photo-text-link">Clique para inserir uma foto para seu perfil</span><br>
-          Seu rosto precisa estar nítido na foto.<br>
-          Tire a foto em um local iluminado.<br>
+          <span class="photo-link">Clique para inserir uma foto para seu perfil</span><br />
+          Seu rosto precisa estar nítido na foto.<br />
+          Tire a foto em um local iluminado.<br />
           Limite máximo de 3mb.
         </p>
       </div>
     </div>
 
+    <!-- Formulário -->
     <div class="formsRegister">
       <div class="form-group">
         <label for="username">Nome completo:</label>
-        <input class="nomeInput" type="text" id="username" name="username" placeholder="Digite seu nome completo">
+        <input [(ngModel)]="nome" class="nomeInput" type="text" id="username" placeholder="Digite seu nome completo" />
       </div>
 
       <div class="form-grupo2">
         <div class="input-container">
           <label for="number">Número:</label>
-          <input class="numInput" type="number" id="number" name="number" placeholder="Digite seu número">
+          <input [(ngModel)]="numero" class="numInput" type="tel" id="number" placeholder="Digite seu número" />
         </div>
-
         <div class="input-container">
           <label for="cpf">CPF:</label>
-          <input class="cpfInput" type="number" id="cpf" name="cpf" placeholder="Digite seu CPF">
+          <input [(ngModel)]="cpf" class="cpfInput" type="text" id="cpf" placeholder="Digite seu CPF" />
         </div>
       </div>
 
       <div class="form-group">
         <label for="email">E-mail:</label>
-        <input class="emailInput" type="text" id="email" name="email" placeholder="Digite seu email">
+        <input [(ngModel)]="email" class="emailInput" type="email" id="email" placeholder="Digite seu email" />
       </div>
 
       <div class="form-group">
         <label for="data">Data de Nascimento:</label>
-        <input class="dataInput" type="date" id="data" name="data">
+        <input [(ngModel)]="dataNascimento" class="dataInput" type="date" id="data" />
       </div>
 
       <div class="form-grupo5">
         <div class="input-container">
           <label for="password">Senha:</label>
-          <input class="senhaInput" type="password" id="password" name="password" placeholder="Digite uma senha" required>
+          <input [(ngModel)]="senha" class="senhaInput" type="password" id="password" placeholder="Digite uma senha" required />
         </div>
-
         <div class="input-container">
           <label for="okpassword">Confirmar a senha:</label>
-          <input class="okSenhaInput" type="password" id="okpassword" name="okpassword" placeholder="Confirme a senha" required>
+          <input [(ngModel)]="confirmarSenha" class="okSenhaInput" type="password" id="okpassword" placeholder="Confirme a senha" required />
         </div>
       </div>
     </div>
 
+    <!-- Botão -->
     <div class="button-wrapper">
-      <a (click)="irParaHome()"><ion-button expand="full" class="button-container" fill="clear">Cadastrar</ion-button></a>
+      <ion-button expand="full" (click)="cadastrar()" [disabled]="carregando">
+        {{ carregando ? 'Cadastrando...' : 'Cadastrar' }}
+      </ion-button>
     </div>
-
   </div>
 </ion-content>

@@ -1,11 +1,11 @@
 <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
-      <div class="profile-container"   [ngClass]="{'blur-effect': mostrarPopUp}">
+      <div class="profile-container" [class.blur-effect]="mostrarPopUp || mostrarPopUpPerfil">
         <ion-avatar (click)="abrirPopUpPerfil()">
-          <img src="assets/img/profile.jpg" alt="Profile" >
+          <img [src]="imageUrl" alt="Profile" (error)="imageUrl = 'assets/img/profile.jpg'">
         </ion-avatar>
-        <ion-icon name="notifications-outline" size="large"></ion-icon>
+        <ion-icon name="notifications-outline" size="large" aria-label="Notificações"></ion-icon>
       </div>
     </ion-buttons>
   </ion-toolbar>
@@ -38,20 +38,18 @@
   </ion-tab-bar>
 </ion-tabs>
 
-<div class="center-button"   [ngClass]="{'blur-effect': mostrarPopUp || mostrarPopUpPerfil}">
+<div class="center-button" [class.blur-effect]="mostrarPopUp || mostrarPopUpPerfil">
   <ion-button class="floating-button" (click)="abrirPopUp()">
     <ion-icon name="add" class="bottom-icon" style="font-size: 40px; width: 40px; height: 40px;"></ion-icon>
   </ion-button>
 </div>
 
-
 <div class="overlay" *ngIf="mostrarPopUp" (click)="fecharPopUp()"></div>
-
 
 <div class="popup" *ngIf="mostrarPopUp">
   <ion-button fill="clear" class="close-btn" (click)="fecharPopUp()">✖</ion-button>
   <div class="popup-content">
-    <a href="https://wa.me/5581986858354" target="_blank">
+    <a href="https://wa.me/5581986858354" target="_blank" rel="noopener noreferrer">
       <ion-icon name="logo-whatsapp"></ion-icon> (81) 98685-8354
     </a>
     <div class="divider"></div>
@@ -59,16 +57,14 @@
   </div>
 </div>
 
-
-
 <div class="overlay" *ngIf="mostrarPopUpPerfil" (click)="fecharPopUpPerfil()"></div>
-
 
 <div class="popup-perfil" *ngIf="mostrarPopUpPerfil">
   <div class="popup-content">
-   <a (click)=" irParaEditP()"> <div class="popup-item">Perfil</div></a>
+    <a (click)="irParaEditP()">
+      <div class="popup-item">Perfil</div>
+    </a>
     <div class="popup-divider"></div>
     <div class="popup-item logout" (click)="logout()">Sair</div>
   </div>
 </div>
-
