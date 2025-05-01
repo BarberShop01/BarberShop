@@ -12,7 +12,7 @@ import { editpPage } from './homeGeral/editProfile/editP.page';
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path:'login', loadChildren: () => import('./login/login.module').then(m=>m.loginModule)},
-  {path:'esqueceuSenha', loadChildren: () => import('./esqueceuSenha/esqueceuSenha.module').then(m=>m.esqueceuSenhaModule)},
+  { path: 'esqueceuSenha', loadComponent: () => import('./esqueceuSenha/esqueceuSenha.page').then(m => m.EsqueceuSenhaPage) },
   {path:'cadastro', loadChildren: () => import('./cadastro/cadastro.module').then (m=>m.cadastroModule)},
   { path: 'pagePrincipal', component: pagePrincPage , children:[
     {path:'home', component: HomePage},
