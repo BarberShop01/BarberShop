@@ -1,3 +1,4 @@
+/* Container principal que centraliza o conteúdo na tela */
 .container {
   display: flex;
   flex-direction: column;
@@ -5,75 +6,92 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
-  padding-top: 20%;
+  padding-top: 5%; /* Menos espaço até o topo */
 }
 
+/* Estilo da aba de barbeiros */
 .barb-tabs {
-  width: 335px;
-  height: 510px;
+  height: 470px;
+  width: 320px;
   background: #232323;
-  border-radius: 5%;
+  border-radius: 12px; /* Bordas mais suaves */
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 20px;
+  padding: 15px; /* Menos padding */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
+/* Título principal "Barbeiros" */
 .barb-title {
   font-family: 'Michroma', sans-serif;
   color: white;
-  margin-bottom: 20px;
-  font-size: 22px;
+  margin-bottom: 10px; /* Menos espaço abaixo do título */
+  font-size: 26px;
+  text-transform: uppercase; /* Título em maiúsculas para mais destaque */
+  letter-spacing: 2px;
 }
 
-.icon-loc {
-  font-size: 18px;
-  color: red;
+/* Ícone do barbeiro ao lado do nome */
+.barb-icon {
+  font-size: 28px;
+  color: #f1c40f; /* Cor dourada para dar destaque ao ícone */
 }
 
-.loc-barb {
+/* Estilo do cabeçalho do barbeiro (com ícone ao lado) */
+.barb-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-family: 'Michroma', sans-serif;
-  font-size: 12px;
-  text-decoration: underline;
-  padding-top: 5px;
-  gap: 5px;
+  gap: 8px; /* Menor gap entre ícone e nome */
+  margin-bottom: 10px; /* Menos espaçamento entre o nome e as especialidades */
 }
 
-.barb-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  margin-top: 15px;
-}
-
-.arrow {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
+/* Descrição do barbeiro */
 .barb-desc {
   text-align: center;
-  width: 75%;
+  width: 100%; /* Garante que a descrição ocupe toda a largura disponível */
+  color: white;
+  padding: 10px;
 }
 
+/* Lista de especialidades */
 .lista1 {
   color: white;
   text-align: left;
-  padding-left: 20px;
-
+  padding-left: 25px;
+  margin-top: 10px; /* Menos espaço entre a lista e o nome */
 }
 
+.lista1 li {
+  margin: 8px 0; /* Menor espaçamento entre os itens */
+}
+
+/* Estilo para o título do barbeiro */
 h3 {
   color: white;
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-bottom: 8px; /* Menos espaço abaixo do nome do barbeiro */
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+/* Alinhar as descrições e nomes dos barbeiros */
+.barb-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px; /* Menos espaço entre os barbeiros */
+}
+
+/* Estilo para as listas de especialidades */
+.barb-content ul {
+  margin-top: 12px;
+  list-style-type: none;
+  padding: 0;
 }
