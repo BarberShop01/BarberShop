@@ -21,4 +21,9 @@ router.post('/cadastrar', upload.single('imagem'), cadastroUsuario); // Cadastro
 router.post('/login', loginUsuario); // Login do usuário
 router.get('/usuario', buscarUsuarioPorEmail); // Buscar usuário por e-mail
 
+router.post('/logout', (req, res) => {
+  // Se futuramente usar sessões, aqui será o lugar para destruí-las
+  res.status(200).json({ message: 'Logout efetuado com sucesso' });
+});
+
 export default router;

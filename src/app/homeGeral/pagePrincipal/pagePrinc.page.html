@@ -3,8 +3,9 @@
     <ion-buttons slot="start">
       <div class="profile-container"   [ngClass]="{'blur-effect': mostrarPopUp}">
         <ion-avatar (click)="abrirPopUpPerfil()">
-          <img src="assets/img/profile.jpg" alt="Profile" >
+          <img [src]="imagemPerfil" alt="Imagem de perfil" class="imagem-perfil">
         </ion-avatar>
+
         <ion-icon name="notifications-outline" size="large"></ion-icon>
       </div>
     </ion-buttons>

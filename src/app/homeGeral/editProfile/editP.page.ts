@@ -9,6 +9,6 @@ styleUrls:['./editP.page.scss'],
 standalone: true,
 imports:[CommonModule, IonicModule]
 })
-export class editpPage{
+export class EditpPage{
   constructor () {}
 }

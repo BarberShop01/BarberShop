@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { homePageRoutings } from './home-routing.module';
-import { ExploreContainerComponentModule } from 'src/app/HomePrincipal/explore-container/explore-container.module';
+import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { HomePage } from './home.page';
 
-
 @NgModule({
-  declarations:[HomePage],
+  declarations: [HomePage],
   imports: [
     CommonModule,
     IonicModule,
@@ -16,6 +15,6 @@ import { HomePage } from './home.page';
     homePageRoutings,
     ExploreContainerComponentModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Mantido caso você tenha componentes personalizados
 })
-export class homeModule {}
+export class homeModule {} // Alterei para HomeModule para seguir a convenção de nomenclatura

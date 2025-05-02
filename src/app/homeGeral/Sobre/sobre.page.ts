@@ -5,6 +5,6 @@ selector:'app-sobre',
 templateUrl:'./sobre.page.html',
 styleUrls:['./sobre.page.scss']
 })
-export class sobrePage {
+export class SobrePage {
   constructor() {}
 }

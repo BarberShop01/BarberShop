@@ -9,6 +9,6 @@ import { IonicModule } from "@ionic/angular";
   standalone: true,
   imports:[CommonModule, IonicModule]
 })
-export class barbPage{
+export class BarbPage{
   constructor() {}
 }

@@ -2,10 +2,10 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { IonicModule } from "@ionic/angular";
 import { barbPageRoutingModule } from "./barb-routing.module";
-import { barbPage } from "./barb.page";
+import { BarbPage } from "./barb.page";
 
 @NgModule({
-  declarations:[barbPage],
+  declarations:[BarbPage],
   imports:[
     CommonModule,
     IonicModule,
