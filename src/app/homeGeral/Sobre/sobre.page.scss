@@ -1,0 +1,35 @@
+.container-sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.sobre-tabs {
+  width: 335px;
+  height: 350px;
+  background: #232323;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.sobre-title {
+  font-family: 'Michroma', sans-serif;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+p{
+  color: white;
+  font-family: 'Michroma', sans-serif;
+  font-size: 13px;
+}
