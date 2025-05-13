@@ -1,19 +1,18 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { IonicModule } from "@ionic/angular";
-import { editProutingModule } from "./editP-routing.module";
-import { importProvidersFrom } from "@angular/core";
-import { editpPage } from "./editP.page"; // Importação direta do componente standalone
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
+import { EditpPage } from './editP.page'; // Importando diretamente o componente standalone
+import { editProutingModule } from './editP-routing.module';
+import { FormsModule } from '@angular/forms'; // Importando FormsModule para usar ngModel
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
-    editProutingModule
+    editProutingModule,
+    FormsModule,
+    EditpPage
   ],
-  providers: [
-    importProvidersFrom(editpPage) // Importando o componente standalone corretamente
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Permitir elementos personalizados do Ionic
 })
-export class editPModule {}
+export class EditpModule {}

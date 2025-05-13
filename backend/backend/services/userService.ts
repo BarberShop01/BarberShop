@@ -145,6 +145,11 @@ export function buscarUsuarioPorEmail(req: Request, res: Response): void {
       return;
     }
 
-    res.status(200).json(results[0]);
+    // Ajuste para retornar a URL completa da imagem
+    const usuario = results[0];
+    const imagem = usuario.imagem ? `${req.protocol}://${req.get('host')}/uploads/${usuario.imagem}` : null;
+    usuario.imagem = imagem;  // Atualiza a URL da imagem
+
+    res.status(200).json(usuario);
   });
 }
