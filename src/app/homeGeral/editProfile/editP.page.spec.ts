@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-import { editpPage } from './editP.page';
+import { EditpPage } from './editP.page';
 
 describe('editPage', () => {
-  let component: editpPage;
-  let fixture: ComponentFixture<editpPage>;
+  let component: EditpPage;
+  let fixture: ComponentFixture<EditpPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [editpPage],
+      declarations: [EditpPage],
       imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(editpPage);
+    fixture = TestBed.createComponent(EditpPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

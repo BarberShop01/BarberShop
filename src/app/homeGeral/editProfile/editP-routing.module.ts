@@ -1,9 +1,9 @@
 import { NgModule } from "@angular/core";
 import {RouterModule, Routes } from "@angular/router";
-import { editpPage } from "./editP.page";
+import { EditpPage } from "./editP.page";
 
 const Routes: Routes = [
-{path:'', component: editpPage}
+{path:'', component: EditpPage}
 ];
 
 @NgModule({
