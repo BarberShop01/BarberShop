@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { sobrePage } from './sobre.page';
+import { SobrePage } from './sobre.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: sobrePage ,
+    component: SobrePage ,
   }
 ];
 

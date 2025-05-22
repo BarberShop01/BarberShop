@@ -3,6 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.serrvices';  // Ajuste o caminho conforme necessário
+import { t } from '@angular/common/common_module.d-Qx8B6pmN';
 
 @Component({
   selector: 'app-page-princ',
@@ -55,5 +56,9 @@ export class PagePrincPage {
   irParaEditP() {
     this.mostrarPopUpPerfil = false;
     this.router.navigate(['/pagePrincipal/editarPerfil']);
+  }
+  irParaMarcPage(){
+    this.mostrarPopUp = false;
+    this.router.navigate(['/pagePrincipal/marcpage']);
   }
 }

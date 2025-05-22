@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,6 +12,10 @@ import { IonicModule } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router,) {}
+
+irparamarcacao(){
+  this.router.navigate(['/pagePrincipal/marcpage']);
+}
 
 }
