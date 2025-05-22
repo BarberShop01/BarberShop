@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { IonicModule } from "@ionic/angular";
 import { editProutingModule } from "./editP-routing.module";
 import { importProvidersFrom } from "@angular/core";
-import { editpPage } from "./editP.page"; // Importação direta do componente standalone
+import { EditpPage } from "./editP.page"; // Importação direta do componente standalone
 
 @NgModule({
   imports: [
@@ -12,7 +12,7 @@ import { editpPage } from "./editP.page"; // Importação direta do componente s
     editProutingModule
   ],
   providers: [
-    importProvidersFrom(editpPage) // Importando o componente standalone corretamente
+    importProvidersFrom(EditpPage) // Importando o componente standalone corretamente
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -28,10 +28,15 @@ const routes: Routes = [
         loadChildren: () => import('../editProfile/editP.module').then(m => m.editPModule)
       },
       {
+        path: 'marcpage',
+        loadComponent: () => import('../MarcPage/marc.module').then(m => m.MarcPageModule)
+      },
+      {
         path: '',
-        redirectTo: '/pagePrinc/home', // Se não houver caminho, vai para 'home'
+        redirectTo: '/pagePrinc/home',
         pathMatch: 'full'
-      }
+      },
+
     ]
   }
 ];

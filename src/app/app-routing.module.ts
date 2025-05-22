@@ -6,6 +6,7 @@ import { LocPage } from './homeGeral/Localizações/loc.page';
 import { BarbPage } from './homeGeral/barbeiros/barb.page';
 import { SobrePage } from './homeGeral/Sobre/sobre.page';
 import { EditpPage } from './homeGeral/editProfile/editP.page';
+import { MarcPage } from './homeGeral/MarcPage/marc.page';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'barbeiros', component: BarbPage },
       { path: 'sobre', component: SobrePage },
       { path: 'editarPerfil', component: EditpPage },
+      { path: 'marcpage', component: MarcPage },
     ]
   }
 ];
