@@ -1,0 +1,111 @@
+.containerMarc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+  font-family: Arial, sans-serif;
+}
+
+.marcTable {
+  height: 420px;
+  width: 320px;
+  background: #232323;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+
+.back {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 320px;
+  padding-left: 3px;
+}
+
+.back ion-icon {
+  color: white;
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Michroma', sans-serif;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Michroma', sans-serif;
+}
+
+.pMarc{
+  margin-top: 5px;
+  color: #ffffff;
+   font-family: 'Michroma', sans-serif;
+   font-size: medium;
+}
+
+.barbersList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+
+.barberOption {
+  background:none;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-family: 'Michroma', sans-serif;
+}
+
+.barberOption input[type="radio"] {
+  margin-right: 10px;
+   width: 22px;
+  height: 22px;
+}
+
+.continueButton {
+  background: #00c3ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: auto;
+  width: 150px;
+  height: 40px;
+  font-family: 'Michroma', sans-serif;
+   align-self: flex-end;
+}
+
+

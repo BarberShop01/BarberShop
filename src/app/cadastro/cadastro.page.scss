@@ -1,0 +1,202 @@
+ion-content {
+  --ion-background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Logo-cadastro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.ImgLogo-registerUser {
+  height: 80px;
+  width: auto;
+}
+
+.suasInfo {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+.tituloSuasInfo {
+  color: #00E5FF;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.P-suasInfo {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.photo-box {
+  width: 90px;
+  height: 90px;
+  background-color: #444;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.photo-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.photo-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 250px;
+}
+
+.photo-text {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.photo-link {
+  color: #00E5FF;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.formsRegister {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.formsRegister label {
+  color: #ffffff;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.form-group,
+.form-group3,
+.form-group4 {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.form-grupo2,
+.form-grupo5 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  flex-wrap: wrap;
+}
+
+.input-container {
+  flex: 1;
+}
+
+.nomeInput,
+.numInput,
+.cpfInput,
+.emailInput,
+.dataInput,
+.okSenhaInput,
+.senhaInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #d1d1d1;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+ion-button {
+  background-color: #00E5FF;
+  color: white;
+  font-weight: bold;
+  width: 180px;
+  border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+  .Logo-cadastro{
+    padding-top: 7%;
+  }
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .upload-section {
+    flex-direction: column;
+  }
+
+  .photo-box {
+    width: 80px;
+    height: 80px;
+  }
+
+  .form-grupo2,
+  .form-grupo5 {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .photo-box {
+    width: 85px;
+    height: 85px;
+  }
+
+  .upload-section {
+    gap: 10px;
+  }
+}

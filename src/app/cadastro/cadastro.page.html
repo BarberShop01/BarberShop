@@ -1,0 +1,87 @@
+<ion-content>
+  <div class="container">
+    <!-- Logo e Link para Login -->
+    <div class="Logo-cadastro">
+      <a (click)="irParalogin()">
+        <img src="assets/Logo-cadastro.png" alt="Logo do registro Usuário" class="ImgLogo-registerUser">
+      </a>
+    </div>
+
+    <!-- Título e subtítulo -->
+    <div class="suasInfo">
+      <h1 class="tituloSuasInfo">Suas informações</h1>
+      <p class="P-suasInfo">Insira suas informações básicas</p>
+    </div>
+
+    <!-- Upload de Foto de Perfil -->
+    <div class="upload-section">
+      <label for="upload-photo" class="photo-box">
+        <img src="assets/iconRegisterUser.png" alt="Foto de perfil" class="photo-preview" [src]="imagemPreview || 'assets/iconRegisterUser.png'">
+      </label>
+      <input type="file" id="upload-photo" accept="image/*" hidden (change)="onFileChange($event)">
+
+      <div class="photo-text-container">
+        <p class="photo-text">
+          <span class="photo-link" id="photo-text-link">Clique para inserir uma foto para seu perfil</span><br>
+          Seu rosto precisa estar nítido na foto.<br>
+          Tire a foto em um local iluminado.<br>
+          Limite máximo de 3MB.
+        </p>
+      </div>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <div class="formsRegister">
+      <!-- Nome Completo -->
+      <div class="form-group">
+        <label for="username">Nome completo:</label>
+        <input class="nomeInput" type="text" id="username" name="username" placeholder="Digite seu nome completo" [(ngModel)]="nome" required>
+      </div>
+
+      <div class="form-grupo2">
+        <!-- Número -->
+        <div class="input-container">
+          <label for="number">Número:</label>
+          <input class="numInput" type="number" id="number" name="number" placeholder="Digite seu número" [(ngModel)]="numero" required>
+        </div>
+
+        <!-- CPF -->
+        <div class="input-container">
+          <label for="cpf">CPF:</label>
+          <input class="cpfInput" type="number" id="cpf" name="cpf" placeholder="Digite seu CPF" [(ngModel)]="cpf" required>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input class="emailInput" type="email" id="email" name="email" placeholder="Digite seu email" [(ngModel)]="email" required>
+      </div>
+
+      <!-- Data de Nascimento -->
+      <div class="form-group">
+        <label for="data">Data de Nascimento:</label>
+        <input class="dataInput" type="date" id="data" name="data" [(ngModel)]="dataNascimento" required>
+      </div>
+
+      <div class="form-grupo5">
+        <!-- Senha -->
+        <div class="input-container">
+          <label for="password">Senha:</label>
+          <input class="senhaInput" type="password" id="password" name="password" placeholder="Digite uma senha" [(ngModel)]="senha" required>
+        </div>
+
+        <!-- Confirmar Senha -->
+        <div class="input-container">
+          <label for="okpassword">Confirmar a senha:</label>
+          <input class="okSenhaInput" type="password" id="okpassword" name="okpassword" placeholder="Confirme a senha" [(ngModel)]="okSenha" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão de Cadastrar -->
+    <div class="button-wrapper">
+      <ion-button expand="full" class="button-container" fill="clear" (click)="cadastrar()">Cadastrar</ion-button>
+    </div>
+  </div>
+</ion-content>

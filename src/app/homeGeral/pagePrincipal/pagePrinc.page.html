@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <div class="profile-container"   [ngClass]="{'blur-effect': mostrarPopUp}">
+        <ion-avatar (click)="abrirPopUpPerfil()">
+          <img [src]="imagemPerfil" alt="Imagem de perfil" class="imagem-perfil">
+        </ion-avatar>
+
+        <ion-icon name="notifications-outline" size="large"></ion-icon>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="back-home">
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom" class="tabs">
+    <ion-tab-button tab="home" href="/pagePrinc/home" style="background-color: #232323;">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="localization" href="/pagePrinc/localizations" style="background-color: #232323;">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Localizações</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="barbeiros" href="/pagePrinc/barbeiros" style="background-color: #232323;">
+      <ion-icon name="cut"></ion-icon>
+      <ion-label>Barbeiros</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="sobre" href="/pagePrinc/sobre" style="background-color: #232323;">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>Sobre</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
+<div class="center-button"   [ngClass]="{'blur-effect': mostrarPopUp || mostrarPopUpPerfil}">
+  <ion-button class="floating-button" (click)="abrirPopUp()">
+    <ion-icon name="add" class="bottom-icon" style="font-size: 40px; width: 40px; height: 40px;"></ion-icon>
+  </ion-button>
+</div>
+
+
+<div class="overlay" *ngIf="mostrarPopUp" (click)="fecharPopUp()"></div>
+
+
+<div class="popup" *ngIf="mostrarPopUp">
+  <ion-button fill="clear" class="close-btn" (click)="fecharPopUp()">✖</ion-button>
+  <div class="popup-content">
+    <a href="https://wa.me/5581986858354" target="_blank">
+      <ion-icon name="logo-whatsapp"></ion-icon> (81) 98685-8354
+    </a>
+    <div class="divider"></div>
+    <ion-button color="primary" (click)="irParaMarcPage()">Marcação de horário</ion-button>
+  </div>
+</div>
+
+
+
+<div class="overlay" *ngIf="mostrarPopUpPerfil" (click)="fecharPopUpPerfil()"></div>
+
+
+<div class="popup-perfil" *ngIf="mostrarPopUpPerfil">
+  <div class="popup-content">
+   <a (click)=" irParaEditP()"> <div class="popup-item">Perfil</div></a>
+    <div class="popup-divider"></div>
+    <div class="popup-item logout" (click)="logout()">Sair</div>
+  </div>
+</div>
+
