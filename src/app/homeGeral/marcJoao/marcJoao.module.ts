@@ -2,22 +2,22 @@ import { NgModule } from '@angular/core';
 import { IonicModule, IonIcon } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { agendamentoPage } from './agendamento.page';
+import { MarcJoaoPage } from './marcJoao.page';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
     path: '',
-    component: agendamentoPage,
+    component: MarcJoaoPage,
   }
 ];
 
 @NgModule({
-  declarations: [agendamentoPage],
+  declarations: [MarcJoaoPage],
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ]
 })

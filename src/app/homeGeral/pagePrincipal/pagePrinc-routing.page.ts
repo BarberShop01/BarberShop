@@ -29,7 +29,15 @@ const routes: Routes = [
       },
       {
         path: 'marcpage',
-        loadComponent: () => import('../MarcPage/marc.module').then(m => m.MarcPageModule)
+        loadComponent: () => import('../MarcPage/marc.page').then(m => m.MarcPage)
+      },
+      {
+        path: 'agendamento',
+        loadComponent: () => import('../agendamento/agendamento.page').then(m=>m.agendamentoPage)
+      },
+      {
+        path: 'marcJoao',
+        loadComponent: () => import ('../marcJoao/marcJoao.page').then(m=>m.MarcJoaoPage)
       },
       {
         path: '',

@@ -1,17 +1,17 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { IonicModule, AlertController } from '@ionic/angular';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AlertController, IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-agendamento',
-  templateUrl: './agendamento.page.html',
-  styleUrls: ['./agendamento.page.scss'],
+  selector: 'app-marcJoao',
+  templateUrl: './marcJoao.page.html',
+  styleUrls: ['./marcJoao.page.scss'],
   standalone: true,
-  imports: [IonicModule, FormsModule, CommonModule]
+  imports: [CommonModule, FormsModule, IonicModule],
 })
-export class agendamentoPage {
+export class MarcJoaoPage {
   meses: string[] = [
     'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'

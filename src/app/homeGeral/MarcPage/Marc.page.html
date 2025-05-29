@@ -10,16 +10,16 @@
     </div>
     <hr class="linhaMarc">
     <p class="pMarc">Marque o barbeiro da sua preferência:</p>
-    <div class="barbersList">
-      <div class="barberOption">
-        <input type="radio" id="lucas" name="barber" checked>
-        <label for="lucas">Lucas Ramos</label>
-      </div>
-      <div class="barberOption">
-        <input type="radio" id="andre" name="barber">
-        <label for="andre">João Silva</label>
-      </div>
-    </div>
-    <button class="continueButton">Continuar</button>
+ <div class="barberOption" *ngFor="let barbeiro of barbeiros; let i = index">
+  <input
+    type="radio"
+    [id]="'barbeiro-' + i"
+    name="barber"
+    [(ngModel)]="barbeiroSelecionado"
+    [value]="barbeiro.valor"
+  >
+  <label [for]="'barbeiro-' + i">{{ barbeiro.nome }}</label>
+</div>
+    <button class="continueButton" (click)="irParaTabela()">Continuar</button>
   </div>
 </div>
