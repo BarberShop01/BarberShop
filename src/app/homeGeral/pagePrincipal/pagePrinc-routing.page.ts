@@ -40,6 +40,10 @@ const routes: Routes = [
         loadComponent: () => import ('../marcJoao/marcJoao.page').then(m=>m.MarcJoaoPage)
       },
       {
+        loadComponent: () => import('../MarcPage/marc.module').then(m => m.MarcPageModule)
+
+      },
+      {
         path: '',
         redirectTo: '/pagePrinc/home',
         pathMatch: 'full'

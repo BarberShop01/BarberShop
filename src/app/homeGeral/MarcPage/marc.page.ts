@@ -4,15 +4,20 @@ import { IonicModule } from "@ionic/angular";
 import { Router } from "@angular/router";
 import { FormsModule } from "@angular/forms";
 
+
+
 @Component({
   selector: 'app-marcpage',
   templateUrl: './marc.page.html',
   styleUrls: ['./marc.page.scss'],
   standalone: true,
+
   imports: [CommonModule, IonicModule, FormsModule]
+
 })
 export class MarcPage {
   constructor(private router: Router) {}
+
 
   barbeiroSelecionado?: string;
 
@@ -35,5 +40,6 @@ export class MarcPage {
         queryParams: { barbeiro: this.barbeiroSelecionado }
       });
     }
-  }
+
+}
 }

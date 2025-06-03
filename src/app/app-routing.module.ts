@@ -10,6 +10,7 @@ import { MarcPage } from './homeGeral/MarcPage/marc.page';
 import { agendamentoPage } from './homeGeral/agendamento/agendamento.page';
 import { MarcJoaoPage } from './homeGeral/marcJoao/marcJoao.page';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'marcpage', component: MarcPage },
       { path: 'agendamento', component: agendamentoPage},
       { path: 'marcJoao', component: MarcJoaoPage}
+
     ]
   }
 ];
